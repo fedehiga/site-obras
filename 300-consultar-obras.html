@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Obras | Consultar obras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+</head>
+
+<body class="d-flex flex-column minh-100">
+
+  <header id="header" class="bg-primary text-white shadow position-fixed w-100">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-2">
+
+        <h1 class="logo mb-0">
+          <a href="100-inicio.html" class="d-block h-100" title="Inicio">
+            <img src="assets/images/logo.png" alt="Site Obras" style="width: 120px" />
+          </a>
+        </h1>
+
+        <div class="d-flex justify-content-end align-items-center">
+
+          <div class="notifications me-6">
+            <a href="#" title="Notificaciones">
+              <div class="notification-icon position-relative pe-1">
+                <svg width="13" height="17" viewBox="0 0 13 17"><path d="M6.5,17a2,2,0,0,0,1.86-2.12H4.64A2,2,0,0,0,6.5,17Zm6.25-5c-.56-.69-1.61-1.73-1.61-5.12A5.12,5.12,0,0,0,7.43,1.75V1.06A1,1,0,0,0,6.5,0a1,1,0,0,0-.93,1.06v.69A5.12,5.12,0,0,0,1.86,6.91c0,3.39-1,4.43-1.61,5.12a1.15,1.15,0,0,0-.25.72,1,1,0,0,0,.93,1.06H12.07A1,1,0,0,0,13,12.75,1.15,1.15,0,0,0,12.75,12Z" fill="#fff"/></svg>
+                <span class="red-dot bg-danger rounded-circle d-inline-block position-absolute"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="user-info">
+            <a href="#" class="h-100 d-flex align-items-center text-white" title="Ver perfil">
+              <div class="img-container rounded-circle overflow-hidden me-3">
+                <img src="assets/placeholders/avatar-profile.jpg" al="Nombre Apellido" />
+              </div>
+              <p class="fs-md">
+                Nombre Apellido <br>
+                <i>(Loremipsum)</i>
+              </p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="d-flex flex-column flex-shrink-0 flex-grow-1 justify-content-between pt-9 pb-14 pt-lg-10 pb-lg-11">
+
+    <main class="page-container position-relative">
+
+      <div class="container my-10">
+  
+        <div class="row justify-content-center">
+          <div class="col-12 col-xxl-11">
+  
+            <div class="row flex-column flex-md-row">
+  
+              <div class="col sidebar-col mb-8">
+                
+                <div class="accordion" id="filters-accordions">
+  
+                  <!-- Accordions. 
+                    - El primer accordion se muestra abierto por default, quitándole la clase css '.collapsed' al button, y agregándole la clase '.show' al div.accordion-collapse
+                    - Nota de implementación dinámica: el atributo data-bs-target del button debe coincidir con el ID del .accordion-collapse que se colapsa o expande. Se podrían generar estos IDs de manera dinámica y única con un counter dentro de un loop, ej: 'collapse-{counter}'
+                  -->
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true">
+                        Identificación
+                      </button>
+                    </h2>
+                    <div id="collapse-1" class="accordion-collapse collapse show" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-1 filter-options-buttons">
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="ID">
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Lorem ipsum">
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="selectEjemplo">
+                            <option selected>Dolor sit amet</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false">
+                        Localización/Territorialidad
+                      </button>
+                    </h2>
+                    <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-2">
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectLocalizacion-1">
+                            <option selected>Municipio</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectLocalizacion-2">
+                            <option selected>Sección Electoral</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false">
+                        Repartición
+                      </button>
+                    </h2>
+                    <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-2">
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectResponsables-2">
+                            <option selected>Subsecretaría</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectResponsables-3">
+                            <option selected>Dependencias</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectResponsables-4">
+                            <option selected>Empresas</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false">
+                        Datos de Ejecución
+                      </button>
+                    </h2>
+                    <div id="collapse-4" class="accordion-collapse collapse" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-2">
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectDatos-1">
+                            <option selected>Eje</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectDatos-2">
+                            <option selected>Estado</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectDatos-3">
+                            <option selected>Lorem</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectDatos-4">
+                            <option selected>Ipsum</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check1">
+                            <label class="form-check-label" for="check1">
+                              Sólo gestión actual
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false">
+                        Datos Financieros
+                      </button>
+                    </h2>
+                    <div id="collapse-5" class="accordion-collapse collapse" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-2">
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectFinanciero-3">
+                            <option selected>Lorem</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <select class="form-select form-select-sm fw-500 text-muted-lt" id="filterSelectFinanciero-4">
+                            <option selected>Ipsum</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="accordion-item bg-white overflow-hidden mb-2 border-0 shadow-lg">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary fs-sm fw-700 shadow-none py-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="true">
+                        Etiquetas
+                      </button>
+                    </h2>
+                    <div id="collapse-6" class="accordion-collapse collapse" data-bs-parent="#filters-accordions">
+                      <div class="accordion-body pt-0">
+                        <div class="d-grid gap-1 filter-options-buttons">
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Lorem" readonly>
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Ipsum" readonly>
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Dolor" readonly>
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Sit" readonly>
+                          <input class="form-control text-start px-2 py-1 fw-500 text-muted-lt" value="Amet" readonly>
+                          <!-- <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Lorem ipsum</button>
+                          <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Dolor sit amet</button>
+                          <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Lorem ipsum</button>
+                          <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Dolor sit amet</button>
+                          <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Lorem ipsum</button>
+                          <button type="button" class="btn btn-light text-start px-2 py-1 fw-500">Dolor sit amet</button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <div class="d-flex justify-content-center mt-4">
+                  <button type="button" class="btn btn-danger btn-sm mx-1" id="clean-filters">Limpiar</button>
+                  <button type="button" class="btn btn-primary btn-sm mx-1">Filtrar</button>
+                </div>
+              </div>
+    
+              <div class="col main-col">
+                
+                <div class="card px-4 pt-4 pb-5 shadow-lg border-0 mb-4">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="flex-grow-1">
+                      <div class="main-title mb-7">
+                        <h2 class="text-primary fs-md d-inline-block border-bottom border-primary px-2 py-1 mb-0">Filtros seleccionados</h2>
+                      </div>
+          
+                      <div class="card-body p-0">
+                        <div class="d-flex">
+  
+                          <button type="button" class="btn btn-tag btn-selected-filter btn-outline-light btn-sm border-0 text-muted d-flex align-items-center px-2 me-3 mb-2 remove-when-clean-filters">
+                            <span class="d-inline-block me-2">La Plata</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5.25" height="5.25" viewBox="0 0 5.25 5.25"><path d="M2.62,2.1l-2-2A.45.45,0,0,0,.37,0,.36.36,0,0,0,.11.12a.36.36,0,0,0,0,.52l2,2-2,2A.39.39,0,0,0,0,4.88a.36.36,0,0,0,.11.26.36.36,0,0,0,.26.11.4.4,0,0,0,.27-.11l2-2,2,2a.39.39,0,0,0,.27.11.38.38,0,0,0,.37-.37.39.39,0,0,0-.11-.27l-2-2,2-2A.27.27,0,0,0,5.22.52a.32.32,0,0,0,0-.14.4.4,0,0,0,0-.15A.83.83,0,0,0,5.14.11.42.42,0,0,0,5,0L4.87,0a.32.32,0,0,0-.14,0A.57.57,0,0,0,4.6.11Z" fill="#666e7d"/></svg>
+                          </button>
+  
+                          <button type="button" class="btn btn-tag btn-selected-filter btn-outline-light btn-sm border-0 text-muted d-flex align-items-center px-2 me-3 mb-2 remove-when-clean-filters">
+                            <span class="d-inline-block me-2">ID: 000000000</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5.25" height="5.25" viewBox="0 0 5.25 5.25"><path d="M2.62,2.1l-2-2A.45.45,0,0,0,.37,0,.36.36,0,0,0,.11.12a.36.36,0,0,0,0,.52l2,2-2,2A.39.39,0,0,0,0,4.88a.36.36,0,0,0,.11.26.36.36,0,0,0,.26.11.4.4,0,0,0,.27-.11l2-2,2,2a.39.39,0,0,0,.27.11.38.38,0,0,0,.37-.37.39.39,0,0,0-.11-.27l-2-2,2-2A.27.27,0,0,0,5.22.52a.32.32,0,0,0,0-.14.4.4,0,0,0,0-.15A.83.83,0,0,0,5.14.11.42.42,0,0,0,5,0L4.87,0a.32.32,0,0,0-.14,0A.57.57,0,0,0,4.6.11Z" fill="#666e7d"/></svg>
+                          </button>
+  
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <!-- El siguiente boton abre un modal, dicho modal está definido después del footer de la página -->
+                      <button type="button" class="btn btn-light btn-lg text-primary fs-md shadow-lg  remove-when-clean-filters" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver detalle de selección</button>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="card px-4 pt-4 pb-5 shadow-lg border-0 mb-4 remove-when-clean-filters">
+                  <div class="card-body p-0">
+                    <div class="d-flex mb-3">
+  
+                      <button type="button" class="btn btn-tag btn-selected-filter btn-outline-light btn-sm border-0 text-muted d-flex align-items-center px-2 me-3 mb-2">
+                        <span class="d-inline-block me-2">La Plata</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5.25" height="5.25" viewBox="0 0 5.25 5.25"><path d="M2.62,2.1l-2-2A.45.45,0,0,0,.37,0,.36.36,0,0,0,.11.12a.36.36,0,0,0,0,.52l2,2-2,2A.39.39,0,0,0,0,4.88a.36.36,0,0,0,.11.26.36.36,0,0,0,.26.11.4.4,0,0,0,.27-.11l2-2,2,2a.39.39,0,0,0,.27.11.38.38,0,0,0,.37-.37.39.39,0,0,0-.11-.27l-2-2,2-2A.27.27,0,0,0,5.22.52a.32.32,0,0,0,0-.14.4.4,0,0,0,0-.15A.83.83,0,0,0,5.14.11.42.42,0,0,0,5,0L4.87,0a.32.32,0,0,0-.14,0A.57.57,0,0,0,4.6.11Z" fill="#666e7d"/></svg>
+                      </button>
+  
+                      <button type="button" class="btn btn-tag btn-selected-filter btn-outline-light btn-sm border-0 text-muted d-flex align-items-center px-2 me-3 mb-2">
+                        <span class="d-inline-block me-2">ID: 000000000</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5.25" height="5.25" viewBox="0 0 5.25 5.25"><path d="M2.62,2.1l-2-2A.45.45,0,0,0,.37,0,.36.36,0,0,0,.11.12a.36.36,0,0,0,0,.52l2,2-2,2A.39.39,0,0,0,0,4.88a.36.36,0,0,0,.11.26.36.36,0,0,0,.26.11.4.4,0,0,0,.27-.11l2-2,2,2a.39.39,0,0,0,.27.11.38.38,0,0,0,.37-.37.39.39,0,0,0-.11-.27l-2-2,2-2A.27.27,0,0,0,5.22.52a.32.32,0,0,0,0-.14.4.4,0,0,0,0-.15A.83.83,0,0,0,5.14.11.42.42,0,0,0,5,0L4.87,0a.32.32,0,0,0-.14,0A.57.57,0,0,0,4.6.11Z" fill="#666e7d"/></svg>
+                      </button>
+  
+                    </div>
+  
+                    <div class="datatable-container overflow-hidden">
+                      <table id="example" class="display table">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>ID Obra</th>
+                            <th>Ejecución</th>
+                            <th>Descripción extendida</th>
+                            <th>Repartición</th>
+                            <th>Municipios</th>
+                            <th>Comitente</th>
+                            <th>Estado</th>
+                            <th>$ actualizado</th>
+                            <th>% financiado</th>
+                            <th>Inicio</th>
+                            <th>Fin</th>
+                            <th>$ devengado</th>
+                            <th>$ pagado</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+  
+    </main>
+  
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xxl-11 my-10">
+          <a href="100-inicio.html" class="fs-md back-link" title="Volver">< Volver</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="bg-primary text-white fs-sm position-fixed w-100">
+    <div class="container py-2 d-flex justify-content-between align-items-center flex-column flex-md-row">
+      <p class="fw-500 me-lg-8 mb-2 mb-md-0 text-center text-md-start">
+        Dirección Provincial de Planificación y Seguimiento de Gestión, Subsecretaría de Planificación y Evaluación de Infraestructura<br>
+        Ministerio de Infraestructura y Servicios Públicos
+      </p>
+      <img class="logo-pba" src="assets/images/logo-pba.png" alt="Gobierno de la Provincia de Buenos Aires" />
+    </div>
+  </footer>
+
+  <!-- Modal charts -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-primary fs-md d-inline-block border-bottom border-primary px-2 py-1 mb-0">Obras filtradas</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-2">
+          <div class="container-fluid">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
+  <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
+
+  <script>
+
+    $( document ).ready(function() {
+
+      // QUITO ELEMENTOS al clickear el buton de #clean-filters
+      $("#clean-filters").on("click", function() {
+        $(".remove-when-clean-filters").remove();
+        $(this).remove();
+        console.log('filtros limpiados')
+        /* actualizar filtros */
+      });
+
+
+      // FILTROS SELECCIONADOS. Al clickear los tags de filtros seleccionados, los remuevo del DOM.
+      $(".btn-selected-filter").click(function() {
+        $(this).remove();
+        console.log('filtro quitado')
+        /* actualizar filtros */
+      });
+
+      // Obras filtradas
+
+      // Detalles de row childs de la tabla
+      function datosChild ( d ) {
+        return	(
+          `<div class="child-slider">
+            <table cellpadding="5" cellspacing="0" border="0">
+              <tr>
+                <td>${d.id}</td>
+                <td>Detalles de la obra</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>${d.desc}</td>
+              </tr>
+            </table>
+          </div>`
+        )
+      }
+
+
+      // Datatable
+
+      const table = $('#example').DataTable({
+        ajax: "assets/data/obras-filtradas.txt",
+        scrollX: true,
+        columns: [
+          {
+            className: 'dt-control',
+            orderable: false,
+            title: '',
+            defaultContent: '',
+          },
+          { "data": "id" },
+          { "data": "ejecucion" },
+          { "data": "desc" },
+          { "data": "reparticion" },
+          { "data": "municipios" },
+          { "data": "comitente" },
+          { "data": "estado" },
+          { "data": "actualizado" },
+          { "data": "financiado" },
+          { "data": "inicio" },
+          { "data": "fin" },
+          { "data": "devengado" },
+          { "data": "pagado" },
+          { "data": null,
+            className: 'vertical-align-middle',
+            orderable: false,
+            render: function ( data, type) {
+                return '<a href="'+data.link+'" class="icon-link"><span></span></a>'
+            },
+          },
+        ],
+        "order": [],
+        "language": {
+          info: "Mostrando en total <strong>_TOTAL_ obras</strong>",
+          paginate: {
+            "previous": "<",
+            "next": ">"
+          },
+          decimal: ",",
+			    thousands: ".",
+        },
+        "dom": "<'row align-items-center justify-content-between mb-3'<'col-12 col-md-6'i><'col-12 col-md-6 text-end'B>>" +
+        "<'row'<'col-12'tr>>" +
+        "<'row mt-3'<'col-12'p>>",
+        buttons: [
+          {
+            extend: 'collection',
+            text: 'Descargas',
+            className: 'btn-light',
+            align: 'button-right',
+            buttons: [
+              {
+                text: 'Opción 1',
+              },
+              {
+                text: 'Opción 2',
+              },
+              {
+                text: 'Opción n',
+              }
+            ]
+          }
+        ]
+      });
+
+      // Add event listener for opening and closing row child details
+      $('#example tbody').on('click', 'td.dt-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+
+        if ( row.child.isShown() ) {
+          $('div.child-slider', row.child()).hide(function () {
+              row.child.hide();
+              tr.removeClass('shown');
+          });
+        } else {
+            row.child( datosChild (row.data()), 'child-row' ).show();
+            tr.addClass('shown');
+
+            $('div.child-slider', row.child()).show();
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>

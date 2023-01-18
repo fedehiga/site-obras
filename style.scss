@@ -1,0 +1,19 @@
+/*!
+Theme Name: Site obras
+Version: 1.0
+!*/
+
+/* Bootstrap custom styles */
+@import 'src/scss/bootstrap-custom.scss';
+
+/* GLightbox styles */
+@import 'src/scss/vendors/glightbox.min.css';
+
+/* Swiper styles */
+@import 'src/scss/vendors/swiper-bundle.min.css';
+
+/* Datatables styles */
+@import 'src/scss/vendors/datatables.min.css';
+
+/* This project custom styles */
+@import 'src/scss/custom.scss';

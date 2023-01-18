@@ -1,0 +1,104 @@
+.table {
+  th {
+    font-size: .625rem;
+    text-transform: uppercase;
+    line-height: 1.25;
+    background: var(--bs-gray-100);
+    box-shadow:none;
+    border-bottom-color: var(--bs-gray-200);
+    vertical-align: middle;
+  }
+
+  tbody {
+    td {
+      font-size: .625rem;
+      line-height: 1.375;
+      box-shadow:none;
+      border-bottom-color: var(--bs-gray-200);
+
+      &.child-row {
+        padding: 0.75rem 2rem;
+      }
+    }
+
+    tr.child-row {
+      box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.08);
+      background: var(--bs-gray-100);
+    }
+  }
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+.icon-link {
+  display:block;
+  width:20px;
+  height:100%;
+  position: relative;
+  text-align: center;
+
+  span {
+    background: url("data:image/svg+xml,%3Csvg width='3' height='13' viewBox='0 0 3 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.49005 7.72935C2.1594 7.72935 2.69488 7.18081 2.69488 6.49513C2.69488 5.80946 2.1594 5.26092 1.49005 5.26092C0.820697 5.26092 0.285217 5.80946 0.285217 6.49513C0.285217 7.18081 0.820697 7.72935 1.49005 7.72935ZM0.285217 10.8835C0.285217 10.1978 0.820697 9.64924 1.49005 9.64924C2.1594 9.64924 2.69488 10.1978 2.69488 10.8835C2.69488 11.5691 2.1594 12.1177 1.49005 12.1177C0.820697 12.1177 0.285217 11.5691 0.285217 10.8835ZM0.285217 2.10681C0.285217 1.42113 0.820697 0.872591 1.49005 0.872591C2.1594 0.872591 2.69488 1.42113 2.69488 2.10681C2.69488 2.79248 2.1594 3.34102 1.49005 3.34102C0.820697 3.34102 0.285217 2.79248 0.285217 2.10681Z' fill='%233DB0C4'/%3E%3C/svg%3E") no-repeat center / 3px;
+    display:block;
+    height:16px;
+  }
+}
+
+td.vertical-align-middle, th.vertical-align-middle {
+  vertical-align: middle;
+}
+
+/* Datatables custom styles */
+
+table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting_asc_disabled, table.dataTable thead>tr>th.sorting_desc_disabled, table.dataTable thead>tr>td.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting_asc_disabled, table.dataTable thead>tr>td.sorting_desc_disabled {
+  padding-right: 16px;
+}
+
+table.dataTable thead>tr>th.sorting:before, table.dataTable thead>tr>th.sorting:after, table.dataTable thead>tr>th.sorting_asc:before, table.dataTable thead>tr>th.sorting_asc:after, table.dataTable thead>tr>th.sorting_desc:before, table.dataTable thead>tr>th.sorting_desc:after, table.dataTable thead>tr>th.sorting_asc_disabled:before, table.dataTable thead>tr>th.sorting_asc_disabled:after, table.dataTable thead>tr>th.sorting_desc_disabled:before, table.dataTable thead>tr>th.sorting_desc_disabled:after, table.dataTable thead>tr>td.sorting:before, table.dataTable thead>tr>td.sorting:after, table.dataTable thead>tr>td.sorting_asc:before, table.dataTable thead>tr>td.sorting_asc:after, table.dataTable thead>tr>td.sorting_desc:before, table.dataTable thead>tr>td.sorting_desc:after, table.dataTable thead>tr>td.sorting_asc_disabled:before, table.dataTable thead>tr>td.sorting_asc_disabled:after, table.dataTable thead>tr>td.sorting_desc_disabled:before, table.dataTable thead>tr>td.sorting_desc_disabled:after {
+  opacity: .25;
+  right: 4px;
+  line-height: 1;
+  font-size: .5rem;
+}
+
+table.dataTable thead>tr>th.sorting_asc:before, table.dataTable thead>tr>th.sorting_desc:after, table.dataTable thead>tr>td.sorting_asc:before, table.dataTable thead>tr>td.sorting_desc:after {
+  opacity: 1;
+  color: var(--bs-primary)
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding: 0;
+  font-size: .75rem;
+}
+
+div.dt-button-collection .dt-button:not(.dt-btn-split-drop) {
+  color: var(--bs-body-color);
+}
+
+div.dt-button-collection {
+  margin-top: .25rem;
+}
+
+table.dataTable td.dt-control:before {
+  height: 12px;
+  width: 12px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  color: var(--bs-body-color);
+  border: 1px solid var(--bs-primary);
+  border-radius: 0;
+  box-shadow: none;
+  line-height: 1;
+  content: "+";
+  background-color: transparent;
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+table.dataTable tr.dt-hasChild td.dt-control:before {
+  background-color: var(--bs-primary);
+  color: white;
+}

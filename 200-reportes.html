@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Obras | Reportes ejecutivos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+  
+</head>
+
+<body class="d-flex flex-column minh-100">
+
+  <header id="header" class="bg-primary text-white shadow position-fixed w-100">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-2">
+
+        <h1 class="logo mb-0">
+          <a href="100-inicio.html" class="d-block h-100" title="Inicio">
+            <img src="assets/images/logo.png" alt="Site Obras" style="width: 120px" />
+          </a>
+        </h1>
+
+        <div class="d-flex justify-content-end align-items-center">
+
+          <div class="notifications me-6">
+            <a href="#" title="Notificaciones">
+              <div class="notification-icon position-relative pe-1">
+                <svg width="13" height="17" viewBox="0 0 13 17"><path d="M6.5,17a2,2,0,0,0,1.86-2.12H4.64A2,2,0,0,0,6.5,17Zm6.25-5c-.56-.69-1.61-1.73-1.61-5.12A5.12,5.12,0,0,0,7.43,1.75V1.06A1,1,0,0,0,6.5,0a1,1,0,0,0-.93,1.06v.69A5.12,5.12,0,0,0,1.86,6.91c0,3.39-1,4.43-1.61,5.12a1.15,1.15,0,0,0-.25.72,1,1,0,0,0,.93,1.06H12.07A1,1,0,0,0,13,12.75,1.15,1.15,0,0,0,12.75,12Z" fill="#fff"/></svg>
+                <span class="red-dot bg-danger rounded-circle d-inline-block position-absolute"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="user-info">
+            <a href="#" class="h-100 d-flex align-items-center text-white" title="Ver perfil">
+              <div class="img-container rounded-circle overflow-hidden me-3">
+                <img src="assets/placeholders/avatar-profile.jpg" al="Nombre Apellido" />
+              </div>
+              <p class="fs-md">
+                Nombre Apellido <br>
+                <i>(Loremipsum)</i>
+              </p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container position-relative d-flex flex-column flex-shrink-0 flex-grow-1 justify-content-between pt-9 pb-14 pb-lg-12"">
+
+    <div class="container my-10">
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-xxl-11">
+          <div class="card px-4 pt-4 pb-5 shadow-lg border-0">
+            <div class="main-title mb-7">
+              <h2 class="text-primary fs-md d-inline-block border-bottom border-primary px-2 py-1 mb-0">Reportes ejecutivos</h2>
+            </div>
+
+            <div class="card-body p-0">
+              <div class="row gx-5 mb-4 align-items-md-center">
+                <label for="reportSelector" class="col-auto col-form-label text-black-50 py-md-0">Seleccionar</label>
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <select class="form-select" id="reportSelector">
+                    <option selected></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-primary">Generar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-11 my-10">
+        <a href="100-inicio.html" class="fs-md back-link" title="Volver">< Volver</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-primary text-white fs-sm position-fixed w-100">
+    <div class="container py-2 d-flex justify-content-between align-items-center flex-column flex-md-row">
+      <p class="fw-500 me-lg-8 mb-2 mb-md-0 text-center text-md-start">
+        Dirección Provincial de Planificación y Seguimiento de Gestión, Subsecretaría de Planificación y Evaluación de Infraestructura<br>
+        Ministerio de Infraestructura y Servicios Públicos
+      </p>
+      <img class="logo-pba" src="assets/images/logo-pba.png" alt="Gobierno de la Provincia de Buenos Aires" />
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
+  <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* purgecss start ignore */
+.gslide-media {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  overflow:hidden;
+}
+
+.gslide-description {
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.glightbox-clean .gdesc-inner {
+  padding:1rem;
+  font-size:.75rem;
+}
+
+.glightbox-clean .gclose {
+  top: 4rem;
+}
+
+.glightbox-container {
+  z-index: 9998!important;
+
+  .goverlay {
+    backdrop-filter: blur(2px);
+    background: rgba(217, 217, 217, 0.5)
+  }
+}
+
+.glightbox-container .gcontainer {
+  &:before {
+    content:'';
+    display:block;
+    height:150px;
+    width:100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.75) 100%);
+    position: absolute;
+    bottom:0;
+  }
+}
+
+.glightbox-clean .gslide-media {
+  box-shadow:none;
+}
+
+.glightbox-clean .gclose, .glightbox-clean .gnext, .glightbox-clean .gprev {
+  background-color:transparent;
+}
+
+.glightbox-clean .gclose path, .glightbox-clean .gnext path, .glightbox-clean .gprev path {
+  fill: black
+}
+
+.glightbox-clean .gclose:hover, .glightbox-clean .gnext:hover, .glightbox-clean .gprev:hover {
+  background-color: transparent;
+}
+
+.glightbox-clean .gclose:hover path, .glightbox-clean .gnext:hover path, .glightbox-clean .gprev:hover path {
+  fill: #666666
+}
+
+.gslide-title {
+  display:none;
+}
+
+.glightbox-mobile .glightbox-container .gslide-description {
+  padding-bottom:1rem;
+  background:none;
+}
+
+.glightbox-mobile .glightbox-container .gslide-desc {
+  color:white;
+}
+
+.glightbox-clean .gslide-desc {
+  font-size:.75rem;
+  font-weight:500;
+}
+
+
+@media (min-width:992px) {
+
+  .glightbox-clean .gslide-desc {
+    color: var(--bs-body-color);
+    
+    span {
+      color: var(--bs-gray-400);
+    }
+  }
+
+  .glightbox-container .gcontainer {
+    &:before {
+      display: none;
+    }
+  }
+  
+}
+/* purgecss end ignore */

@@ -1,0 +1,336 @@
+/* Bootstrap Customizations and Overrides */
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+/* Colors */
+
+$min-contrast-ratio: 2.5;
+
+// scss-docs-start gray-color-variables
+$gray-100: #F9F9FB;
+$gray-200: #E0E4EC;
+$gray-300: #D2D6DE;
+$gray-400: #ABABAB;
+$gray-600: #717B8C;
+$gray-700: #585E6A;
+$gray-800: #4C535F;
+$gray-900: #2E2E2E;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+// scss-docs-end gray-colors-map
+
+$blue-100: #FAFBFC;
+
+$blues: (
+  "blue-100": $blue-100
+);
+
+$white: #FFF;
+$black: #000;
+$cyan: #3DB0C4;
+$green: #00953C;
+$red:     #C43D3D;
+
+$colors: (
+  "cyan":      $cyan,
+  "red":      $red,
+  "green":     $green,
+);
+// scss-docs-end colors-map
+
+$primary:       $cyan;
+$secondary:     $green;
+
+$color-primary:   $cyan;
+$bg-primary:   $cyan;
+
+$body-color: $gray-800;
+
+
+
+/* Enable CSS grid */
+$enable-cssgrid: true;
+
+
+
+/* Type */
+
+$font-family: 'Roboto', Arial, Helvetica,sans-serif;
+$font-family-base: $font-family;
+
+
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   0;
+
+
+
+/* Cards */
+
+$card-border-radius: .5rem;
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0 4px 4px rgba($black, .25);
+$box-shadow-lg:               0 3px 9px rgba(154, 154, 154, .25);      
+
+// Components
+$border-radius:               .25rem;
+$border-radius-sm:            .25rem;
+
+
+
+// FORMS
+
+// Inputs
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .625rem;
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .375rem;
+$input-font-size:             .75rem;
+$input-font-size-sm:          .75rem;
+$input-bg:                    $blue-100;
+$input-border-color:          $gray-200;
+$input-box-shadow:            null;
+
+// Buttons
+$btn-padding-y:               .375rem;
+$btn-padding-x:               1.25rem;
+$btn-border-radius:           $border-radius-sm;
+$btn-border-width:            1px;
+
+$btn-padding-y-sm:            .25rem;
+$btn-padding-x-sm:            1rem;
+$btn-font-size-sm:            .75rem;
+
+$btn-padding-y-lg:            .625rem;
+
+$btn-font-size:               .75rem;
+$btn-font-size-lg:            1rem;
+
+// Selects
+$form-select-box-shadow:  0;
+$form-select-border-radius:       .25rem;
+$form-select-padding-y-sm:        .25rem;
+$form-select-padding-x-sm:        .75rem;
+$form-select-font-size-sm:        .75rem;
+$form-select-border-radius-sm:    .25rem;
+$form-select-indicator-color:       $gray-400;
+
+
+// scss-docs-start form-label-variables
+$form-label-margin-bottom:              .25rem;
+$form-label-font-size:                  .875rem;
+$form-label-font-weight:                bold;
+// scss-docs-end form-label-variables
+
+
+
+// TABLES
+
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        .5rem;
+$table-th-font-weight:        normal;
+
+
+// Pagination
+
+// scss-docs-start pagination-variables
+$pagination-padding-y:              .25rem;
+$pagination-padding-x:              .5rem;
+$pagination-border-radius:          .25rem;
+$pagination-font-size:              .75rem;
+
+
+// List group
+
+// scss-docs-start list-group-variables
+$list-group-color:                  $gray-400;
+$list-group-item-padding-y:         .675rem;
+
+
+// Dropdowns
+// scss-docs-start dropdown-variables
+$dropdown-font-size:                .75rem;
+$dropdown-color:                    $body-color;
+
+$dropdown-link-hover-bg:            $gray-100;
+
+$dropdown-item-padding-y:           .25rem;
+$dropdown-item-padding-x:           .25rem;
+
+
+
+// Modals
+$modal-backdrop-bg:                 transparent;
+$modal-backdrop-opacity:            1;
+$modal-content-bg:                  $gray-100;
+$modal-content-border-width:        0;
+$modal-content-box-shadow-xs:       none;
+$modal-content-box-shadow-sm-up:    none;
+$modal-header-padding-y:            1.25rem;
+$modal-header-padding-x:            1.5rem;
+$modal-inner-padding:               1rem 1.5rem 1.25rem;
+$modal-xl:                          1200px;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: ($spacer * .75),
+  4: $spacer,
+  5: ($spacer * 1.25),
+  6: ($spacer * 1.5),
+  7: ($spacer * 1.75),
+  8: ($spacer * 2),
+  9: ($spacer * 2.5),
+  10: ($spacer * 3),
+  11: ($spacer * 4),
+  12: ($spacer * 5),
+  13: ($spacer * 7),
+  14: ($spacer * 9 ),
+);
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   #F5F5F5;
+$body-color:                black !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-decoration:                         none !default;
+
+
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           2rem !default;
+$grid-row-columns:            6 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-shadows:              true;
+$enable-deprecation-messages: false;
+
+// scss-docs-start accordion-variables
+$accordion-padding-y:                     1rem !default;
+$accordion-padding-x:                     1rem;
+$accordion-color:                         $body-color !default; // Sass variable because of $accordion-button-icon
+$accordion-bg:                            $white !default;
+$accordion-border-width:                  0px;
+$accordion-border-radius:                 .5rem;
+$accordion-button-active-bg:              #FFF;
+$accordion-icon-width:                    .75rem !default;
+$accordion-icon-color:                    $gray-600;
+
+// Nav Tabs
+$nav-link-padding-y:                .25rem;
+$nav-link-padding-x:                .375rem;
+$nav-link-font-size:                .875rem;
+$nav-link-color:                    $gray-600;
+$nav-tabs-border-color:             transparent;
+$nav-tabs-border-width:             0;
+$nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-link-active-color:        $primary;
+$nav-tabs-link-active-bg:           transparent;
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+// @import "../../node_modules/bootstrap/scss/carousel";
+// @import "../../node_modules/bootstrap/scss/spinners";
+// @import "../../node_modules/bootstrap/scss/offcanvas";
+// @import "../../node_modules/bootstrap/scss/placeholders";
+// @import "../../node_modules/bootstrap/scss/print";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";

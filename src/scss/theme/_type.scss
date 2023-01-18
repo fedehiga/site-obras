@@ -1,0 +1,123 @@
+small, .small {
+  font-size: 75%;
+}
+
+/* Weight */
+
+.fw-400, .fw-default {
+  font-weight: 400!important;
+}
+
+.fw-500 {
+  font-weight: 500!important;
+}
+
+.fw-700, strong {
+  font-weight: 700!important;
+}
+
+/* Families */
+
+.ff-default {
+  font-family: $font-family
+}
+
+
+
+/* Headlines */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 1rem;
+  font-family: $font-family;
+  font-weight:bold;
+}
+
+h1, .h1 {
+  font-size:1.75rem;
+}
+
+h2, .h2 {
+  font-size:1.375rem;
+}
+
+h3, .h3 {
+  font-size:1.25rem
+}
+
+h4, .h4 {
+  font-size: inherit;
+}
+
+h5, .h5 {
+  font-size:1rem
+}
+
+
+/* Sizes */
+
+/* 16px */
+.fs-default {
+  font-size:1rem 
+}
+
+/* 10px */
+.fs-xs {
+  font-size:.625rem
+}
+
+/* 12px */
+.fs-sm {
+  font-size:.75rem
+}
+
+/* 14px */
+.fs-md {
+  font-size:.875rem
+}
+
+/* 18px */
+.fs-lg {
+  font-size:1.125rem
+}
+
+/* 20px */
+.fs-xl {
+  font-size:1.25rem
+}
+
+/* 24px */
+.fs-xxl {
+  font-size:1.5rem
+}
+
+/* 32px */
+.fs-xxxl {
+  font-size:2rem
+}
+
+
+.lh-xl {
+  line-height:2.5
+}
+
+
+/* Media Queries */
+
+@include media-breakpoint-up(sm) {
+
+}
+
+@include media-breakpoint-up(md) {
+
+
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+
+}

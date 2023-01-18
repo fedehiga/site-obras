@@ -1,0 +1,36 @@
+/* Forms */
+/* purgecss start ignore */
+
+.form-control {
+  box-shadow:none;
+
+  &:focus {
+    outline: 0;
+    box-shadow:none;
+  }
+}
+
+textarea {
+  &.form-control {
+    min-height:72px;
+  }
+}
+
+.col-form-label {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+  font-size:.75rem;
+}
+
+label {
+  font-size:.75rem;
+  font-weight: 500;
+}
+
+input[type="file"] {
+  &.form-control {
+    padding: .5rem 1rem;
+  }
+}
+
+/* purgecss end ignore */

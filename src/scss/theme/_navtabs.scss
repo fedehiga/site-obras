@@ -1,0 +1,21 @@
+/* purgecss start ignore */
+.nav-tabs {
+  .nav-item {
+    font-weight: 500;
+    margin-right: .75rem;
+
+    .nav-link {
+      border-radius: 0;
+
+      &:hover {
+        color: $dark
+      }
+  
+      &.active {
+        border-bottom-color: $primary!important;
+      }
+    }
+
+  }
+}
+/* purgecss end ignore */
