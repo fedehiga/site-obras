@@ -599,7 +599,9 @@
                                 <h4 class="text-primary fs-sm mb-3">Analisis de tiempos en días</h4>
                               </div>
                               <div class="col-12 mb-4">
-                                <p>[ chart ]</p>
+                                <div id="chart-1">
+
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1998,6 +2000,7 @@
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
   <script src="assets/js/datatables.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
 
@@ -2043,9 +2046,62 @@
     });
 
 
-
+    // Reevalua el ajuste de columnas al clickear en una pestaña
     $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
       $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+    });
+
+    // Chart
+    Highcharts.chart('chart-1', {
+
+      chart: {
+        height: '250px'
+      },
+
+      title: {
+        text: null
+      },
+
+      yAxis: {
+        title: {
+          text: 'Lorem ipsum'
+        }
+      },
+
+      xAxis: {
+        accessibility: {
+          rangeDescription: 'Range: 2010 to 2020'
+        }
+      },
+
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+      },
+
+      plotOptions: {
+        series: {
+          label: {
+            connectorAllowed: false
+          },
+          pointStart: 2010
+        }
+      },
+
+      series: [{
+        name: 'Installation & Developers',
+        data: [53934, 58656, 65165, 81827, 80000, 78000, 66000, 55000, 47000, 52000, 60000],
+        showInLegend: false,
+        dataLabels: {
+            enabled: false
+        }
+      }],
+
+      credits: {
+          enabled: false
+      }
+
     });
 
 

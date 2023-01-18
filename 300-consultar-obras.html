@@ -369,7 +369,28 @@
         </div>
         <div class="modal-body px-2">
           <div class="container-fluid">
-            ...
+            <div class="row gx-3">
+              <div class="col-12 col-md-6 col-lg-4 text-center mb-3">
+                <div class="card overflow-hidden p-4">
+                  <h3 class="fs-xs mb-2">Montos</h3>
+                  <div id="chart-1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-3">
+              <div class="col-12 col-md-6 col-lg-4 text-center mb-3">
+                <div class="card overflow-hidden p-4">
+                  <h3 class="fs-xs mb-2">Obras por estado</h3>
+                  <div id="chart-2"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 text-center mb-3">
+                <div class="card overflow-hidden p-4">
+                  <h3 class="fs-xs mb-2">Obras por repartición</h3>
+                  <div id="chart-3"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -379,7 +400,242 @@
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
   <script src="assets/js/datatables.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
+  <!-- CHART -->
+  <script>
+    Highcharts.chart('chart-1', {
+      chart: {
+          type: 'pie',
+          height: '300px'
+      },
+      title: {
+          verticalAlign: 'top',
+          text: 'TOTAL',
+          style: { "color": "#000", "fontSize": "10px", "fontWeight": "500" }
+      },
+      plotOptions: {
+          pie: {
+              innerSize: '100%'
+          },
+          series: {
+              states: {
+                  hover: {
+                      enabled: false
+                  },
+                  inactive: {
+                      opacity: 1
+                  }
+              }
+          }
+      },
+      series: [{
+          borderWidth: 0,
+          name: 'Montos',
+          data: [{
+                  y: 30,
+                  name: "Otro",
+                  color: {
+                      linearGradient: {
+                          x1: 0,
+                          x2: 0,
+                          y1: 0,
+                          y2: 1
+                      },
+                      stops: [
+                          [0, '#2fbbf1'],
+                          [1, '#e87fc5']
+                      ]
+                  },
+              },
+              {
+                  y: 20,
+                  name: "Monto Actualizado",
+                  color: "#cbd3f6",
+              },
+              {
+                y: 20,
+                name: "Monto Pagado",
+                color: "#6776cd",
+              },
+              {
+                y: 20,
+                name: "Monto Devengado",
+                color: "#3e4b9e",
+              }
+          ],
+          size: '100%',
+          innerSize: '65%',
+          showInLegend: true,
+          floating: true,
+          dataLabels: {
+              enabled: false
+          }
+      }],
+      legend: {
+        layout: 'horizontal',
+        itemStyle: { "color": "#000", "fontSize": "8px", "fontWeight": "500" }
+      },
+      credits: {
+          enabled: false
+      }
+    });
+
+    Highcharts.chart('chart-2', {
+      chart: {
+          type: 'pie',
+          height: '300px'
+      },
+      title: {
+          verticalAlign: 'top',
+          text: 'TOTAL',
+          style: { "color": "#000", "fontSize": "10px", "fontWeight": "500" }
+      },
+      plotOptions: {
+          pie: {
+              innerSize: '100%'
+          },
+          series: {
+              states: {
+                  hover: {
+                      enabled: false
+                  },
+                  inactive: {
+                      opacity: 1
+                  }
+              }
+          }
+      },
+      series: [{
+          borderWidth: 0,
+          name: 'Montos',
+          data: [{
+                  y: 30,
+                  name: "Otro",
+                  color: {
+                      linearGradient: {
+                          x1: 0,
+                          x2: 0,
+                          y1: 0,
+                          y2: 1
+                      },
+                      stops: [
+                          [0, '#2fbbf1'],
+                          [1, '#e87fc5']
+                      ]
+                  },
+              },
+              {
+                  y: 20,
+                  name: "Monto Actualizado",
+                  color: "#cbd3f6",
+              },
+              {
+                y: 20,
+                name: "Monto Pagado",
+                color: "#6776cd",
+              },
+              {
+                y: 20,
+                name: "Monto Devengado",
+                color: "#3e4b9e",
+              }
+          ],
+          size: '100%',
+          innerSize: '65%',
+          showInLegend: true,
+          dataLabels: {
+              enabled: false
+          }
+      }],
+      legend: {
+        layout: 'horizontal',
+        itemStyle: { "color": "#000", "fontSize": "8px", "fontWeight": "500" }
+      },
+      credits: {
+          enabled: false
+      }
+    });
+
+    Highcharts.chart('chart-3', {
+      chart: {
+          type: 'pie',
+          height: '300px'
+      },
+      title: {
+          verticalAlign: 'top',
+          text: 'TOTAL',
+          style: { "color": "#000", "fontSize": "10px", "fontWeight": "500" }
+      },
+      plotOptions: {
+          pie: {
+              innerSize: '100%'
+          },
+          series: {
+              states: {
+                  hover: {
+                      enabled: false
+                  },
+                  inactive: {
+                      opacity: 1
+                  }
+              }
+          }
+      },
+      series: [{
+          borderWidth: 0,
+          name: 'Montos',
+          data: [{
+                  y: 30,
+                  name: "Otro",
+                  color: {
+                      linearGradient: {
+                          x1: 0,
+                          x2: 0,
+                          y1: 0,
+                          y2: 1
+                      },
+                      stops: [
+                          [0, '#2fbbf1'],
+                          [1, '#e87fc5']
+                      ]
+                  },
+              },
+              {
+                  y: 20,
+                  name: "Monto Actualizado",
+                  color: "#cbd3f6",
+              },
+              {
+                y: 20,
+                name: "Monto Pagado",
+                color: "#6776cd",
+              },
+              {
+                y: 20,
+                name: "Monto Devengado",
+                color: "#3e4b9e",
+              }
+          ],
+          size: '100%',
+          innerSize: '65%',
+          showInLegend: true,
+          dataLabels: {
+              enabled: false
+          }
+      }],
+      legend: {
+        layout: 'horizontal',
+        itemStyle: { "color": "#000", "fontSize": "8px", "fontWeight": "500" }
+      },
+      credits: {
+          enabled: false
+      }
+    });
+  </script>
+
+
+  <!-- TABLES -->
   <script>
 
     $( document ).ready(function() {
