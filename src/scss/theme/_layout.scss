@@ -263,7 +263,25 @@ dd {
   padding: 0 0 .75rem 0;
 }
 
+ul.bullet-primary {
+  list-style-type: none;
+  li {
+    padding-left: 1.125rem;
+    position: relative;
+    margin-bottom: .5rem;
 
+    &:before {
+      content: '';
+      display: inline-block;
+      width:11px;
+      height: 11px;
+      background: var(--bs-primary);
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+}
 
 @include media-breakpoint-up(sm) {
 
