@@ -25,6 +25,8 @@ Estructura de estilos:
 - Todos los estilos anteriores (Bootstrap, libs JS y theme custom styles) se importan y concatenan desde *./style.scss*.
 - Finalmente se compila todo a *./style.css* (ejecutando *npm run build*).
 
+Para todo el maquetado de los html se han utilizado los helpers y utlidades estandar de Bootstrap, ej [Link](https://getbootstrap.com/docs/5.2/utilities/spacing/), por lo cual se redujo al mínimo los estilos custom definidos en *src/scss/theme*.
+
 ## JS
 
 Librerías JS externas utilizadas en el proyecto:
@@ -36,4 +38,6 @@ Librerías JS externas utilizadas en el proyecto:
 - **Datatables**: tablas con controles avanzados, [Link](https://datatables.net/).
 - **Highcharts**: gráficos de charts, [Link](https://www.highcharts.com/).
 
-Escrito el 17/01/23. Última actualización: 17/01/23.
+Todo el javascript custom se encuentra en *assets/js/scripts.js*, excepto el javascript de los datatables y charts que se encuentran inline al final de los html.
+
+Escrito el 17/01/23. Última actualización: 25/01/23.

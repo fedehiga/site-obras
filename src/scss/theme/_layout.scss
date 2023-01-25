@@ -152,15 +152,21 @@ footer {
 /* Homepage */
 
 .home-intro {
-  &:before {
-    content:'';
-    top:0;
+  .bg-dark {
     left:0;
     right:0;
     bottom:0;
     position: absolute;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.6)!important;
     display:block;
+    z-index:0
+  }
+
+  .bg-slider {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
     z-index:0
   }
 }

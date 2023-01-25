@@ -54,14 +54,30 @@
 
   <main class="page-container position-relative d-flex flex-column flex-shrink-0 flex-grow-1  pt-10 pb-14 pb-lg-10">
 
-    <div class="home-intro bg-cover bg-white pt-14 position-relative" style="background-image:url('assets/placeholders/landscape.jpg')">
+    <div class="home-intro bg-white pt-14 position-relative">
+      <div class="bg-slider overflow-hidden position-absolute w-100">
+        <div class="position-relative h-100">
+          <div class="swiper h-100">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="assets/placeholders/landscape.jpg" alt="Descripción de la imagen" class="img-cover" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/placeholders/landscape-02.jpg" alt="Descripción de la imagen" class="img-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark"></div>
       <div class="container position-relative">
         <div class="row justify-content-between">
           <div class="col-12 col-lg-6">
             <div class="mb-6">
               <img src="assets/placeholders/logo-shadow.png" alt="Site Obras" style="max-width:250px; height:auto;"/>
             </div>
-            <div class="text-intro text-white pb-8">
+            <div class="text-intro text-white pb-4">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit nemo repellendus nisi voluptatem amet mollitia accusantium porro laudantium temporibus, tempore officiis, quo aut ratione neque, voluptates ipsum tempora ut exercitationem.</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iusto iste quo maxime harum omnis pariatur excepturi tempore ad sint voluptatum recusandae esse ducimus totam magni ex libero numquam blanditiis voluptas, id enim aut sunt unde illo! Illum, aspernatur nesciunt.</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vero repellendus consequuntur incidunt sunt a earum quidem quasi expedita tempora.</p>
@@ -95,23 +111,23 @@
 
     <div class="container py-12">
       <div class="d-flex flex-wrap justify-content-center align-items-center h-100">
-        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link">
+        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link min-w">
           <span class="rounded-1 bg-primary square me-3"></span>
           <span>SIGAF</span>
         </a>
-        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link">
+        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link min-w">
           <span class="rounded-1 bg-primary square me-3"></span>
           <span>GDEBA</span>
         </a>
-        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link">
+        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link min-w">
           <span class="rounded-1 bg-primary square me-3"></span>
           <span>Geoinfra</span>
         </a>
-        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link">
+        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link min-w">
           <span class="rounded-1 bg-primary square me-3"></span>
           <span>FOMM</span>
         </a>
-        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link">
+        <a href="#" class="btn btn-light btn-border-gray shadow-lg text-primary text-uppercase d-inline-flex align-items-center ps-3 py-3 mx-1 my-1 fs-md square-link min-w">
           <span class="rounded-1 bg-primary square me-3"></span>
           <span>Site Pampa</span>
         </a>
@@ -134,5 +150,7 @@
 
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

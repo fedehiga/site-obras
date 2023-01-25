@@ -52,47 +52,65 @@
     </div>
   </header>
 
-  <main class="page-container position-relative d-flex flex-column flex-shrink-0 flex-grow-1 justify-content-between pt-9 pb-14 pb-lg-12"">
+  <div class="d-flex flex-column flex-shrink-0 flex-grow-1 justify-content-between pt-9 pb-14 pt-lg-10 pb-lg-11">
 
-    <div class="container my-10">
+    <main class="page-container position-relative">
 
-      <div class="row justify-content-center">
-        <div class="col-12 col-xxl-11">
-          <div class="card px-4 pt-4 pb-5 shadow-lg border-0">
-            <div class="main-title mb-7">
-              <h2 class="text-primary fs-md d-inline-block border-bottom border-primary px-2 py-1 mb-0">Reportes ejecutivos</h2>
-            </div>
+      <div class="container my-10">
 
-            <div class="card-body p-0">
-              <div class="row gx-5 mb-4 align-items-md-center">
-                <label for="reportSelector" class="col-auto col-form-label text-black-50 py-md-0">Seleccionar</label>
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <select class="form-select" id="reportSelector">
-                    <option selected></option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+        <div class="row justify-content-center">
+          <div class="col-12 col-xxl-11">
+            <div class="card px-4 pt-4 pb-5 shadow-lg border-0">
+              <div class="main-title mb-7">
+                <h2 class="text-primary fs-md d-inline-block border-bottom border-primary px-2 py-1 mb-0">Reportes ejecutivos</h2>
+              </div>
+
+              <div class="card-body p-0">
+                <div class="row gx-5 mb-9 align-items-md-center">
+                  <label for="reportSelector" class="col-auto col-form-label text-black-50 py-md-0">Seleccionar Municipio</label>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <select class="form-select" id="reportSelector">
+                      <option selected></option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-primary">Generar</button>
+                  </div>
                 </div>
-                <div class="col-auto">
-                  <button type="button" class="btn btn-primary">Generar</button>
+                <div class="d-flex">
+                  <a href="#" class="btn btn-light btn-sm btn-border-gray bg-white shadow-lg text-primary d-inline-flex align-items-center ps-3 py-2 my-1 me-4 fs-sm square-link">
+                    <span class="rounded-1 bg-primary square me-2"></span>
+                    <span>Tablero DGA</span>
+                  </a>
+                  <a href="#" class="btn btn-light btn-sm btn-border-gray bg-white shadow-lg text-primary d-inline-flex align-items-center ps-3 py-2 my-1 me-4 fs-sm square-link">
+                    <span class="rounded-1 bg-primary square me-2"></span>
+                    <span>Seguimiento Presupuestario</span>
+                  </a>
+                  <a href="#" class="btn btn-light btn-sm btn-border-gray bg-white shadow-lg text-primary d-inline-flex align-items-center ps-3 py-2 my-1 me-4 fs-sm square-link">
+                    <span class="rounded-1 bg-primary square me-2"></span>
+                    <span>Jefatura de Gabinete</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
-    </div>
+    </main>
 
-  </main>
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-xxl-11 my-10">
-        <a href="100-inicio.html" class="fs-md back-link" title="Volver">< Volver</a>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xxl-11 my-10">
+          <a href="100-inicio.html" class="fs-md back-link" title="Volver">< Volver</a>
+        </div>
       </div>
     </div>
+
   </div>
 
   <footer class="bg-primary text-white fs-sm position-fixed w-100">
@@ -107,5 +125,6 @@
 
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/bootstrap.5.2.3.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

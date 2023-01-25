@@ -5,7 +5,13 @@
   font-weight: 700;
 
   &.square-link {
-    min-width: 190px
+    &.min-w {
+      min-width: 190px
+    }
+  }
+
+  &:hover {
+    box-shadow: none!important;
   }
 
   &.btn-border-gray {
@@ -44,6 +50,13 @@
   .square {
     width: 18px;
     height: 18px
+  }
+
+  &.btn-sm {
+    .square {
+      width: 12px;
+      height: 12px
+    }
   }
 }
 
